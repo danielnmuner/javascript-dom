@@ -2,7 +2,7 @@
 
 ### Introduccion
   - [x] [¿Qué es HTML y CSS? ¿Para qué sirven?](#¿-qué-es-html-y-css-?-¿-para-qué-sirven-?)
-  - [x] [Motores de render: de archivos a píxeles](#motores-de-render-:-de-archivos-a-píxeles)
+  - [x] [Motores de render: de archivos a píxeles](#motores-de-render:-de-archivos-a-píxeles)
 ### Maquetación con HTML
   - [x] [Anatomía de un documento HTML](#anatomía-de-un-documento-html) 
 
