@@ -7,6 +7,9 @@
   - [x] [Anatomía de un documento HTML](#anatomía-de-un-documento-html) 
   - [x] [¿Qué es HTML semántico?](#¿-qué-es-html-semántico-?)
   - [x] [Etiquetas de HTML más usadas](#etiquetas-de-html-más-usadas)
+### Maquetación con CSS
+  - [x] [Anatomía de una declaración CSS](#anatomía-de-una-declaración-css)
+  - [x] [Tipos de selectores](#tipos-de-selectores) 
 
 
 ### ¿Qué es HTML y CSS? ¿Para qué sirven?
@@ -113,13 +116,75 @@ que se debe colocar en un [input]
     <input type="text" id="name">
 </form>
 ```
+### Anatomía de una declaración CSS
 
+- **Selector**: Comunica HTML con CSS
+![image](https://user-images.githubusercontent.com/60556632/166086015-b36f914a-3298-42a0-b9a5-96c83aa11f42.png)
 
+### Tipos de selectores
+Podemos utilizar la etiqueta `style` arriba de `head` para estilizar dentro del HTML. Los **Selectores Basico** son los siguientes: 
 
+```html
+<style>
+/* Selector de Tipo */
+    div {
+        background: pink;
+    }
+/* Selector de Clase como .titulo
+donde algunas etiquetas pertenecen 
+a esta clase */
+    .titulo {
+        color:blueviolet
+/* Selector de Id el cual usualmente solo
+pertenece a una etiqueta especifica*/
+    }
+    #kws {
+        color: yellowgreen;
+    }
+/* Selector de Atributos aqui el atributo es
+href el cual especificamente apunta a platzi.com */
+    a[href="platzi.com"] {
+        color: blue;
+    }
+/* Selector Universal se aplica principlamente
+sobre todo el HTML */
+    * {
+        background: papayawhip;
+    }
+</style>
+```
 
+Los **Selectores Combinadores** son los siguientes: 
 
-
-
-
-
+```html
+<style>
+    /*Desendiente se refiere a todos los
+    selectores o etiquetas que estan dentro 
+    de una etiqueta padre, como [p] dentro de [div]*/
+    div p {
+        color: aqua;
+    }
+    /*Hijo Directo consite en aplicar la 
+    propiedad de div justo al primer div dentro 
+    de la etiqueta padre, no afectara otras etiquetas*/
+    div > div {
+        background: blueviolet;
+    }
+    /*Elemento Adyacente A diferencia del caso anterior
+    aplica la propiedad a la etiqueta que le sigue en orden
+    y no que esta dentro de la misma
+    */
+    div + div {
+        background: blueviolet;
+    }
+    /*General de Hermanos es muy similar al caso 
+    anterior, solo que no solo se aplica la propiedad
+    al primer elemento si no a todas las etiquetas por
+    ejemplo p seguidas y despues de div
+    */
+    div ~ p {
+        background: blueviolet;
+    }
+</style>
+```
 
