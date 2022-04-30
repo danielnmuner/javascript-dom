@@ -5,6 +5,7 @@
   - [x] [Motores de render](#motores-de-render)
 ### Maquetación con HTML
   - [x] [Anatomía de un documento HTML](#anatomía-de-un-documento-html) 
+  - [x] [¿Qué es HTML semántico?](#¿-qué-es-html-semántico-?)
 
 
 ### ¿Qué es HTML y CSS? ¿Para qué sirven?
@@ -33,10 +34,9 @@ donde asi nos podemos comunicar con CSS
 ```
 Las etiquetas en HTML tiene una estructura de anidamiento dependiendo de la funcion de la etiqueta. 
 
-```html
-<!-- Creamos la estructura basica de html escribiendo: -->
-html:5
+- Podemos inicia la estructura basica de html escribiendo: `html:5`
 
+```html
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -49,6 +49,25 @@ html:5
 </body>
 </html>
 ```
+Luego de haber creado la estructura basica podemos ir estructuranto nuestro documento paso a paso:
+
+```html
+<body>
+    <section>
+        <h1>Platzi</h1>
+        <p>Incredible</p>
+        <ul>
+            <li>Breathtaking</li>
+            <li>Marvelous</li>
+        </ul>
+    </section>
+</body>
+```
+### ¿Qué es HTML semántico?
+
+Nos anima a utilizar las etiquetas adecuadas en dentro del documento dependiendo del tipo de informacion consignada, en otras palabras no solo valernos de la etiqueta `<div>`. Asi el codigo es mas accesible y mayor posicionamiento en SEO.
+
+
 
 
 
