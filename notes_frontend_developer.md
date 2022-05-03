@@ -1,9 +1,5 @@
 ## Frontend Developer
 
-This is my [random value] located somewhere in my Markdown document.
-
-[random value]: variable value
-
 ### Introduccion
   - [x] [¿Qué es HTML y CSS? ¿Para qué sirven?](#¿-qué-es-html-y-css-?-¿-para-qué-sirven-?)
   - [x] [Motores de render](#motores-de-render)
