@@ -10,6 +10,7 @@
 ### Maquetación con CSS
   - [x] [Anatomía de una declaración CSS](#anatomía-de-una-declaración-css)
   - [x] [Tipos de selectores](#tipos-de-selectores) 
+  - [x] [Pseudoclases y Pseudoelementos](#pseudoclases-y-pseudoelementos)
 
 
 ### ¿Qué es HTML y CSS? ¿Para qué sirven?
@@ -187,5 +188,44 @@ Los **Selectores Combinadores** son los siguientes:
     }
 </style>
 ```
+### Pseudoclases y Pseudoelementos
+
+Las [**Pseudoclases :**](https://css-tricks.com/pseudo-class-selectors/) se refiere a las acciones realizadas por el usuario que activaran estilizaciones dinamicas.
+
+```css
+    /*Definimos el color de p*/
+    p {
+        color: salmon;
+    }
+     /*Cambiamos las propiedades de estilo de p con hover*/
+    p:hover {
+        color:skyblue;
+        font-weight: 700;
+        font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+     /*p dentro de div ubicado en el 2do logar hereda este estilo especial*/
+    }
+    div p:nth-child(2){
+        color: black;
+    }
+```
+
+
+Los [**Pseudoelementos ::**](https://developer.mozilla.org/en-US/docs/Web/CSS/Pseudo-elements) son elementos que escribimos desde CSS, por ejemplo, el **::after** y el **::before** nos puedes funcionar como `divs`, como su nombre lo dice, son elementos, pero no necesariamente están escritos desde el HTML 
+
+```css
+    /*Pseudoelementos afectan al HTML
+    indirectamente, aqui se modifica solo la primera letra*/
+    p::first-letter{
+        color: blue;
+    }
+    /*Añade texto o emoji antes o despues de p*/
+    p::before {
+        content: "🤠";
+    }
+    p::after {
+        content: "👽"
+    }
+```
+
 
 
