@@ -13,6 +13,8 @@
   - [x] [Tipos de selectores](#tipos-de-selectores) 
   - [x] [Pseudoclases y Pseudoelementos](#pseudoclases-y-pseudoelementos)
   - [x] [Cascada y especificidad en CSS](#cascada-y-especificidad-en-css)
+  - [x] [Tipos de display](#tipos-de-display)
+  - [x] [Flexbox y CSS grid](#flexbox-y-css-grid)
 
 
 ### ¿Qué es HTML y CSS? ¿Para qué sirven?
@@ -237,4 +239,79 @@ La relevancia se mide en puntos y entre mas puntos mayor especificidad luego **C
 ![image](https://user-images.githubusercontent.com/60556632/166583181-c858ace6-6cef-42d9-ad30-580d7cb740ff.png)
 
 Podemos utilizar la calculadora de especificidad y asi saber cuantos puntos tiene nuestra regla. [Calculadora](https://specificity.keegan.st/)
+
+### Tipos de display
+![image](https://user-images.githubusercontent.com/60556632/166584335-5210ed5a-2bfb-4ebd-8f4d-368b5e3c22a1.png)
+
+- **inline**: Estos elementos son los que su caja mide exactamente lo mismo que su contenido. Estos elementos los podemos usar en textos y en lugar de que se agreguen en una nueva línea se agregaran justo al ladito del texto. ❗ Tienen como desventaja que no podemos ponerles márgenes ni tampoco podemos cambiar su tamaño.
+
+```css
+/*Este codino haria nada cuando la etiqueta es de tipo inline
+pero si funcionaria si fuera en etiquetas tipo bloque como div*/
+div {
+    background: salmon;
+    width: 200px;
+    height: 100px;
+    margin: 20px;
+}
+```
+
+- **block**: Estos elementos ocupan toda la pantalla, por lo que si quieres agregar otro elemento, este se agregará automáticamente abajo. No importa que tengas poco contenido, el elemento sí o sí va a ocupar toda la pantalla.
+
+- **inline-block**: Esto mezcla lo mejor de ambos mundos. Con este display podemos tener tanto los beneficios de inline como de block, es decir, podemos tener elementos que no ocupen todo el ancho de la pantalla, sino que ocupen solamente lo que su contenido ocupa, pero también vamos a poder darle márgenes y podremos cambiar su tamaño 🤠.
+
+```css
+/*Button es una etiqueta inline-block, luego por default seria inline pero puede llegar a ser block si cambiamos su estilos */
+
+button {
+    background: salmon;
+    width: 200px;
+    height: 100px;
+    margin: 20px;
+}
+
+<button>I'm a Button</button>
+```
+### Flexbox y CSS Grid
+
+Cursos para entender mejor **Flexbox y CSS Grid**
+- [Flexbox VS CSS Grid](https://platzi.com/blog/flexbox-vs-css-grid-cual-es-la-diferencia/)
+- [CSS Grid Layout](https://platzi.com/clases/css-grid-layout/)
+- [Flexbox y CSS Grid](https://platzi.com/clases/flexbox-css-grid/)
+- [🚀 Guide to Flexbox](https://css-tricks.com/snippets/css/a-guide-to-flexbox/)
+- [Platzi Course](https://platzi.com/clases/2229-flexbox-css-grid/36134-diferencias-entre-flexbox-y-css-grid/)
+
+En **HTML** creamos un `.contenedor` con varios `.items`
+
+```html
+<div class="container">
+    <div class="item"></div>
+    <div class="item"></div>
+    <div class="item"></div>
+    <div class="item"></div>
+</div>
+```
+En **CSS** no encargamos disñar la distribucion que tendra el sitio web, como se ve a continuacion en el caso de Flexbox.
+
+```css
+  .container {
+  /*Indicamos si es grid o flex y alineamos o centramos los items*/
+      display: flex;
+      background: papayawhip;
+      justify-content: center;
+      height: 100px;
+      align-items: center;
+  }
+  /*Estilizamos los items y validamos en el inspeccionador de elementos
+  que estos esten ubicados en la posicion correcta.*/
+  
+  .item {
+      width: 30px;
+      height: 30px;
+      background: purple;
+  }
+  .container .item:nth-child(2n+1){
+      background: orange;
+  }
+```
 
