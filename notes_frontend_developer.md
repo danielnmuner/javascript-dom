@@ -1,4 +1,5 @@
 ## Frontend Developer
+### [Colors HTML](https://htmlcolorcodes.com/)
 
 ### Introduccion
   - [x] [¿Qué es HTML y CSS? ¿Para qué sirven?](#¿-qué-es-html-y-css-?-¿-para-qué-sirven-?)
@@ -11,6 +12,7 @@
   - [x] [Anatomía de una declaración CSS](#anatomía-de-una-declaración-css)
   - [x] [Tipos de selectores](#tipos-de-selectores) 
   - [x] [Pseudoclases y Pseudoelementos](#pseudoclases-y-pseudoelementos)
+  - [x] [Cascada y especificidad en CSS](#cascada-y-especificidad-en-css)
 
 
 ### ¿Qué es HTML y CSS? ¿Para qué sirven?
@@ -209,7 +211,6 @@ Las [**Pseudoclases :**](https://css-tricks.com/pseudo-class-selectors/) se refi
     }
 ```
 
-
 Los [**Pseudoelementos ::**](https://developer.mozilla.org/en-US/docs/Web/CSS/Pseudo-elements) son elementos que escribimos desde CSS, por ejemplo, el **::after** y el **::before** nos puedes funcionar como `divs`, como su nombre lo dice, son elementos, pero no necesariamente están escritos desde el HTML 
 
 ```css
@@ -226,6 +227,14 @@ Los [**Pseudoelementos ::**](https://developer.mozilla.org/en-US/docs/Web/CSS/Ps
         content: "👽"
     }
 ```
+### Cascada y especificidad en CSS
+El orden en que escribimos **CSS** importa y existen reglas de especificidad, donde indicamos quien **prevalece** sobre quien. Como podemos ver hay mayor relevancia sobre `#Id` que `Selector Universal`.
 
+![image](https://user-images.githubusercontent.com/60556632/166581318-0fcd8c89-cead-400b-bf84-bcc6a0ca664a.png)
 
+La relevancia se mide en puntos y entre mas puntos mayor especificidad luego **CSS** prevalecera sobre otras propiedades.
+
+![image](https://user-images.githubusercontent.com/60556632/166583181-c858ace6-6cef-42d9-ad30-580d7cb740ff.png)
+
+Podemos utilizar la calculadora de especificidad y asi saber cuantos puntos tiene nuestra regla. [Calculadora](https://specificity.keegan.st/)
 
