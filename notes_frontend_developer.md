@@ -16,6 +16,7 @@
   - [x] [Tipos de display](#tipos-de-display)
   - [x] [Flexbox y CSS grid](#flexbox-y-css-grid)
   - [x] [Modelo de Caja](#modelo-de-caja)
+  - [x] [Colapso de Margenes](#colapso-de-margenes)
 
 
 ### ¿Qué es HTML y CSS? ¿Para qué sirven?
@@ -338,6 +339,28 @@ Debemos entender que al final las etiquetas de **HTML** son cajas con diferentes
 }
 ```
 - **box-sizing: border-box;** Es muy importante si no queremos que width total sea mayor a un limite definido.
+
+### Colapso de Margenes
+
+Cuando colocamos concecutivamente dos elementos de tipo **bloque** las margenes de van a solapar esto ocurre **cuando no** tenemos contenedores tipo **grid** o **flexbox**. Por lo tanto si esto ocurre lo mejor es utilizar un contenedor:
+
+```html
+<section class="container">
+    <div>Platzi</div>
+    <div>Master</div>
+</section>    
+```
+Y posteriormente utilizar **flexbox** o **CSS Grid**
+
+```css
+.container {
+    display: flex;
+    flex-direction:column;
+}
+div {
+    margin: 20px;
+}
+```
 
 
 
