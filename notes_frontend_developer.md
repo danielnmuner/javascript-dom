@@ -15,6 +15,7 @@
   - [x] [Cascada y especificidad en CSS](#cascada-y-especificidad-en-css)
   - [x] [Tipos de display](#tipos-de-display)
   - [x] [Flexbox y CSS grid](#flexbox-y-css-grid)
+  - [x] [Modelo de Caja](#modelo-de-caja)
 
 
 ### ¿Qué es HTML y CSS? ¿Para qué sirven?
@@ -314,4 +315,32 @@ En **CSS** no encargamos disñar la distribucion que tendra el sitio web, como s
       background: orange;
   }
 ```
+
+### Modelo de Caja
+
+Debemos entender que al final las etiquetas de **HTML** son cajas con diferentes tipos de visualizacion. Y cada caja tiene ciertas propiedades que podemos o a veces debemos modificar.
+
+![image](https://user-images.githubusercontent.com/60556632/166590647-9058d33d-c25a-466f-8ab9-467f6238fb93.png)
+
+- **padding:** Es básicamente el espaciado que hay entre la caja y el contenido de la caja, es un espaciado interno. Lo solemos usar mucho para permitir que los elementos “respiren”.
+
+- **border**: Es el delineado que le podemos dar a una caja, y un borde puede ser tan grueso como quieras. Simplemente debemos ponerle el grosor, el tipo de borde y el color del borde.
+
+- **margin:** Este es básicamente el espaciado entre elementos. Es la distancia que podemos dejar de un elemento hacia otro.
+
+- **box-sizing: border-box;** es sencilla: si pones esta propiedad, el tamaño final de tu caja va a ser del width que tú le pongas, si no la pones, el tamaño final de tu caja va a ser del width que tú le pongas más el tamaño de tu padding. 
+
+```html
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+```
+- **box-sizing: border-box;** Es muy importante si no queremos que width total sea mayor a un limite definido.
+
+
+
+
+
 
