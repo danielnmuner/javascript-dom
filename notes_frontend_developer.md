@@ -22,6 +22,7 @@
   - [x] [Propiedades](#propiedades)
   - [x] [Unidades de medida](#unidades-de-medida) 
   - [x] [Responsive Design](#responsive-design)
+  - [x] [Arquitecturas CSS](#arquitecturas-css)
 
 
 ### ¿Qué es HTML y CSS? ¿Para qué sirven?
@@ -473,4 +474,33 @@ html {
       }
   }
 ```
+
+### Arquitecturas CSS
+
+- **Código predecible**  
+
+Dentro de una arquitectura predecible las nuevas reglas de estilo que son añadidas reaccionan de forma previsible: no sufren contaminación alguna por parte de otras reglas (tampoco hacia otros elementos) ni existen dependencias incongruentes entre las reglas de los diferentes elementos del plano.
+
+- **Código reutilizable**  
+
+La abstracción (aislar un elemento de su contexto o del resto de los elementos que lo acompañan) es un paradigma de programación con una útil aplicación en nuestro entorno. Mantener la abstracción en la arquitectura de CSS nos permitirá diseñar reglas modelo, aptas para infinidad de elementos con características comunes
+
+- **Código mantenible**  
+
+Esta característica está referida a la facilidad con la que puede realizarse una modificación y/o mantenimiento de un código. Algunas de las prácticas que garantizarán este aspecto son:
+
+- Ordena, comenta y categoriza tu código de forma lógica y jerárquica
+- Crea código legible
+- Crea código intuitivo
+- Declara clases descriptivas
+
+- **Código escalable**  
+
+Salvaguardar la escalabilidad de tu CSS supondrá que éste podrá ser manipulado de una forma sencilla al realizar las tareas necesarias para abordar el crecimiento de la plataforma. En estos casos la curva de aprendizaje que permitirá comprender y adquirir las capacidades necesarias para alterar tu código no debería ser excesivamente grande
+
+#### [OOCSS](https://www.smashingmagazine.com/2011/12/an-introduction-to-object-oriented-css-oocss/#top), [BEM](https://platzi.com/blog/bem/), [SMACSS](https://medium.com/@GreenXIII/organize-your-css-smacss-way-89c087db5092), [ITCSS](https://www.xfive.co/blog/itcss-scalable-maintainable-css-architecture/) y [Atomic Design](https://bradfrost.com/blog/post/atomic-web-design/)
+
+
+
+
 
