@@ -17,6 +17,11 @@
   - [x] [Flexbox y CSS grid](#flexbox-y-css-grid)
   - [x] [Modelo de Caja](#modelo-de-caja)
   - [x] [Colapso de Margenes](#colapso-de-margenes)
+  - [x] [Posicionamiento en CSS](#posicionamiento-en-css)
+  - [x] [Z index y el contexto de apilamiento](#z-index-y-el-contexto-de-apilamiento)
+  - [x] [Propiedades](#propiedades)
+  - [x] [Unidades de medida](#unidades-de-medida) 
+  - [x] [Responsive Design](#responsive-design)
 
 
 ### ¿Qué es HTML y CSS? ¿Para qué sirven?
@@ -362,8 +367,110 @@ div {
 }
 ```
 
+### Posicionamiento en CSS
+![image](https://user-images.githubusercontent.com/60556632/166615461-cafe5c99-18b8-410d-90ba-20bbdf0d8d8e.png)
+
+Usualmente es preferible trabajar con nuestras técnicas de alineamiento comunes como CSS Grid o Flexbox, pero suele haber casos donde sí o sí necesitamos usar position.
+
+En este ejemplo creamos un contenedor de dos imagenes.
+```html
+<div class="container">
+
+<img id="estambre" src="https://pixabay.com/get/gcace262ba99b669194b5054d0a18589d64d2858de5ccde802a2bd69112122969cc55406c4d138c9738ad55e21d831bab_640.png" alt="Estambre">
+
+<img id="michi" src="https://static.platzi.com/media/user_upload/michi-0cd46b59-feda-4746-81a0-cc48179411ae.jpg" alt="Michi">
+
+</div>
+```
+Simplemente a mi container le pongo un **position: relative;** y al estambre le pongo un **position: absolute;**. Recuerda que cuando usamos un **absolute**, este elemento se va a mover con respecto al elemento relative más cercano, así que en este caso moveremos el estambre con respecto a nuestro **contenedor**😄.
+
+```css
+.container {
+ position: relative;
+}
+
+.container,
+#michi {
+    width: 800px;
+}
+#estambre {
+    width: 100px;\
+    position: absolute;
+    top: 190px;
+    right: 245px;
+}
+
+```
+![image](https://user-images.githubusercontent.com/60556632/166616196-49a9a043-92af-43b7-ab60-42defb503e30.png)
+
+![image](https://user-images.githubusercontent.com/60556632/166616251-c0e2a6fc-2df8-4eca-b4e6-8cc273f3e8a8.png)
 
 
+### Z index y el contexto de apilamiento
 
+Se trata del **eje Z** donde podemos colocar varias capas o sobre poner elementos como los pop-ups de ads. A continuacion se observa que **yellow** esta contenido dentro de **blue**, luego al heredar la posicion de **blue** aunque yellow **Z-index** sea mas grande que **red**, no lograra sobreponerse a **red**.
 
+![image](https://user-images.githubusercontent.com/60556632/166617316-0632ddd8-9474-4f03-926f-5df96cb0fd3e.png)
+
+```html
+<body>
+<!--
+  Al usar las clases no importa el orden
+  de las etiquetas.
+-->
+  <div class="one">Platzi</div>
+  <div class="two">Master</div>
+</body>
+```
+Si modificamos `Z-index` se veria de la siguiente forma: 
+```css
+<style>
+  div {
+    background: paleturquoise;
+    /*Al ser absolute, div se sobrepone*/
+    position: absolute;  
+  }
+  .one {
+      z-index: 4;
+  }
+  .two {
+      z-index: 5;
+  }
+</style>
+```
+### [Propiedades](https://cssreference.io/)
+![image](https://user-images.githubusercontent.com/60556632/166618556-3da38369-9589-46a4-a8b9-dd5609743148.png)
+
+### Unidades de medida
+![image](https://user-images.githubusercontent.com/60556632/166619382-4eebf7ab-dcb7-4507-ab22-9a864b2710b2.png)
+
+- **Absolutas** No dependen de factores externos.
+- **Relativas** Estás si pueden cambiar en relación con el dispositivo que lo estamos viendo.
+
+![image](https://user-images.githubusercontent.com/60556632/166619503-daf2769e-53df-4920-81b4-c25330cfd50e.png)
+
+Si establecemos que `1rem` es igual a `10px` en vez de `16px` sera mas sensillo utilizar `rem`, esto se logra `font-size = 62.5%;` en vez de `font-size = 100%;`
+
+```html
+html {
+  font-size = 62.5%;
+}
+```
+### [Responsive Design](https://platzi.com/clases/1906-diseno-programadores/28552-diseno-responsivo/)
+
+```css
+  div {
+      background: purple;
+  }
+  /*Indica que si la pantalla es menor
+  a 300px cambia a rojo sino se mantiene
+  en morado, en general podemos colocar 
+  todo tipo de propiedades dependiendo el 
+  tamano*/
+  @media (min-width:300px) {
+      div {
+          background: red;
+      }
+  }
+```
 
